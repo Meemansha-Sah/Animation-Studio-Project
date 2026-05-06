@@ -1,7 +1,9 @@
+package engine;
+/*Adds Canvas or the drawing platform to the JFrame */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-class AnimationCanvas extends JPanel{
+public class AnimationCanvas extends JPanel{
     int x = 0,y=300;
     public AnimationCanvas(){
         refreshRect.start();
