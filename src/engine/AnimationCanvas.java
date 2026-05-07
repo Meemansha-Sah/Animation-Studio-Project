@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class AnimationCanvas extends JPanel{
-    int x = 0,y=300;
+    CircleObject circle = new CircleObject(100, 300, 60, Color.RED);
     public AnimationCanvas(){
         refreshRect.start();
     }
@@ -13,15 +13,13 @@ public class AnimationCanvas extends JPanel{
         super.paintComponent(g);
         g.setColor(new Color(200, 250, 250));
         g.fillRect(0, 0, getWidth(), getHeight());
-
-        g.setColor(new Color(250, 200, 200));
-        g.fillRect(x, y, 100, 30);
+        circle.draw(g);
 
     }
     ActionListener move=new ActionListener(){
         public void actionPerformed(ActionEvent ae){
-            if(x==(getWidth()-100))x=0;
-            x+=2;
+            if(circle.x==(getWidth()-100))circle.x=0;
+            circle.x+=2;
             repaint();
         }
     };
