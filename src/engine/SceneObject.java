@@ -16,4 +16,5 @@ abstract class SceneObject{
         this.color=color;
     }
     public abstract void draw(Graphics g);
+    public abstract void update(int canvasWidth);
 }
